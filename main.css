@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&family=Style+Script&display=swap');
+
+
+body{
+    background-color: rgb(31, 31, 36);
+}
+
+#field {
+    height: 200px;
+    border-bottom: 3px black groove;
+    position: relative;
+  }
+  
+  #ball {
+    position: absolute;
+    cursor: pointer;
+  }
+
+
+p{
+    font-family: 'Rubik Mono One', sans-serif;;
+    font-size: 70px;
+    color: #fff;
+    text-shadow: #2400ff 10px 10px 30px, #7e2bd9 -10px -10px 30px;;
+    -webkit-text-stroke: 2px #fc78ff;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 5px;
+}
+
+.path{
+    stroke: aqua;
+    stroke-width: 6px;
+    stroke-dasharray: 6488;
+    stroke-dashoffset: 6488;
+    animation: draw 15s linear forwards;
+    
+}
+@keyframes draw{
+    100%{
+        stroke-dashoffset: 0;
+    }
+}
+
+
+.path2{
+    stroke: rgb(231, 242, 241);
+    stroke-width: 6px;
+    stroke-dasharray: 6488;
+    stroke-dashoffset: 6488;
+    animation: draw 70s linear forwards;
+    
+}
+
+.wrap_anim{
+    display: flex;
+}
+
+.wrap_ice_box{
+    display: flex;
+    flex-direction: column;
+    margin-left: 80px;
+    position: relative;
+    box-shadow: 10px 10px 500px rgb(142, 198, 241), inset 10px 10px 500px rgb(142, 198, 241);
+    
+
+}
+
+.box4{
+    
+    position: absolute;
+    top: 30px;
+    left: 30px;
+}
+.box5{
+    position: absolute;
+    top: 30px;
+    left: 70px;
+}
+.box6{
+    position: absolute;
+    top: 50px;
+    left: 35px;
+}
+.box7{
+    position: absolute;
+    top: 50px;
+    left: 35px;
+}
+.box8{
+    position: absolute;
+    top: -31px;
+    left: -20px;
+}
+.box9{
+    position: absolute;
+    top: -36px;
+    left: -20px;
+}
+.box10{
+    position: absolute;
+    top: 162px;
+    left: -49px;
+}
+.box11{
+    position: absolute;
+    top: 126px;
+    left: 214px;
+}
+.box12{
+    position: absolute;
+    top: 435px;
+    left: 40px;
+}
+.box13{
+    position: absolute;
+    top: 444px;
+    left: 217px;
+}
+
+/* .audio:active{
+    display: none;
+} */
+
+audio {
+    width: 300px;
+    height: 55px;
+}
+
+audio::-webkit-media-controls-panel, video::-webkit-media-controls-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* We use flex-start here to ensure that the play button is visible even
+     * if we are too small to show all controls.
+     */
+    justify-content: flex-start;
+    -webkit-user-select: none;
+    position: relative;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+    text-align: right;
+    bottom: auto;
+    height: 55px;
+    background-color: rgba(217, 128, 229, 0.9);
+    border-radius: 5px;
+    /* The duration is also specified in MediaControlElements.cpp and LayoutTests/media/media-controls.js */
+    transition: opacity 0.3s;
+}
